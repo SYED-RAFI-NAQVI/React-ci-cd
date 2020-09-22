@@ -13,7 +13,6 @@ class App extends Component {
     items: [{ id: 1, title: 'first todo' }, { id: 2, title: 'second todo' }],
     id: uuidv4(),
     item: "",
-    editItem: false,
   }
   handleChange = e => {
     this.setState({
@@ -49,7 +48,6 @@ class App extends Component {
       items: filteredItems,
       item: selectedItems.title,
       id: id,
-      editItem: true
     })
   }
 
