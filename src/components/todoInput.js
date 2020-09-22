@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 
 export default class TodoInput extends Component {
   render() {
+    const { item, handleChange, handleSubmit, editItem } = this.props
     return (
       <div>
-        <h1>todoInput</h1>
-        {/* github vscode */}
+        <form onSubmit={handleSubmit}>
+          <input value={item} onChange={handleChange} />
+          <button type="submit">ADD TODO</button>
+        </form>
       </div>
     )
   }
